@@ -3,8 +3,9 @@ import config from 'ember-get-config';
 export function initialize(/* application */) {
 
   let options = config["ember-drag-drop-polyfill"] || {};
+  let isApple = ['iPhone', 'iPad', 'iPod'].includes(navigator.platform);
 
-  if (typeof DragDropPolyfill !== 'undefined') {
+  if (typeof DragDropPolyfill !== 'undefined' && isApple) {
     DragDropPolyfill.Initialize(options);
   }
 }
