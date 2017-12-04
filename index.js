@@ -39,26 +39,26 @@ module.exports = {
     options = Object.assign(defaults, options);
 
     app.import({
-      development: app.bowerDirectory + options.dependencyFolder + '/release/drag-drop-polyfill.js',
-      production: app.bowerDirectory + options.dependencyFolder + '/release/drag-drop-polyfill.min.js'
+      development: 'node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill.js',
+      production: 'node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill.min.js'
     });
 
     if (options.includeCss) {
-      app.import(app.bowerDirectory + options.dependencyFolder + '/release/drag-drop-polyfill.css');
+      app.import('node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill.css');
     }
 
     if (options.includeIconsCss) {
-      app.import(app.bowerDirectory + options.dependencyFolder + '/release/drag-drop-polyfill-icons.css');
+      app.import('node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill-icons.css');
     }
 
     if (options.includeDebugCss) {
-      app.import(app.bowerDirectory + '/' + options.dependencyFolder + '/release/drag-drop-polyfill-debug.css');
+      app.import('node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill-debug.css');
     }
 
     if (options.includeScrollBehavior) {
       app.import({
-        development: app.bowerDirectory + '/' + options.dependencyFolder + '/release/drag-drop-polyfill-scroll-behaviour.js',
-        production: app.bowerDirectory + '/' + options.dependencyFolder + '/release/drag-drop-polyfill-scroll-behaviour.js'
+        development: 'node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill-scroll-behaviour.js',
+        production: 'node_modules' + options.dependencyFolder + '/release/drag-drop-polyfill-scroll-behaviour.js'
       });
     }
 

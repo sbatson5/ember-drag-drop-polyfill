@@ -14,8 +14,4 @@ module.exports = {
   // afterInstall: function(options) {
   //   // Perform extra work here.
   // }
-
-  afterInstall(/* options */) {
-    return this.addBowerPackageToProject('drag-drop-polyfill', '2.0.0-beta.3');
-  }
 };

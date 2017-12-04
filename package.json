@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-get-config": "^0.2.1"
+    "ember-get-config": "^0.2.1",
+    "drag-drop-polyfill": "2.0.0-beta.3"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
